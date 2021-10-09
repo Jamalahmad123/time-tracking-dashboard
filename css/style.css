@@ -149,6 +149,7 @@ img {
 .cards-container {
   display: grid;
   gap: 2rem;
+  width: 90%;
 }
 
 .cards-container .card {
