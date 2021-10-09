@@ -28,7 +28,7 @@
   /* The designs were created to the following widths: */
 
   --Mobile: 375px;
-  --Desktop: 114rem;
+  --Desktop: 112rem;
 }
 
 /* General Styles */
@@ -83,12 +83,10 @@ img {
 
 .dashboard {
   display: grid;
-  place-content: center;
   gap: 2rem;
-  max-width: var(--Desktop);
   width: 100%;
   color: #fff;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 /* media querie for layout */
@@ -96,6 +94,7 @@ img {
 @media screen and (min-width: 768px) {
   .dashboard {
     grid-template-columns: 20rem 1fr;
+    max-width: var(--Desktop);
   }
   .tracker {
     flex-direction: column;
