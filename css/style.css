@@ -1,0 +1,231 @@
+/* ## Colors */
+:root {
+  /* ### Primary */
+
+  --Blue: hsl(246, 80%, 60%);
+
+  --Light-red-work: hsl(15, 100%, 70%);
+  --Soft-blue-play: hsl(195, 74%, 62%);
+  --Light-red-study: hsl(348, 100%, 68%);
+  --Lime-green-exercise: hsl(145, 58%, 55%);
+  --Violet-social: hsl(264, 64%, 52%);
+  --Soft-orange-self-care: hsl(43, 84%, 65%);
+
+  /* ### Neutral */
+
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+
+  /* ## Typography */
+
+  /* (card titles e.g. Work, Play) */
+  --Font-size: 18px;
+
+  /* ## Layout */
+
+  /* The designs were created to the following widths: */
+
+  --Mobile: 375px;
+  --Desktop: 114rem;
+}
+
+/* General Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-display: swap;
+  font-family: "Rubik", sans-serif;
+  background-color: var(--Very-dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Utilities */
+.title {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.user-report {
+  font-size: 1.4rem;
+  color: var(--Pale-Blue);
+}
+
+.report {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--Desaturated-blue);
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.active {
+  color: #fff;
+}
+
+.dashboard {
+  display: grid;
+  gap: 2rem;
+  max-width: var(--Desktop);
+  width: 100%;
+  color: #fff;
+  padding: 1rem;
+}
+
+/* media querie for layout */
+
+@media screen and (min-width: 768px) {
+  .dashboard {
+    grid-template-columns: 20rem 1fr;
+  }
+  .tracker {
+    flex-direction: column;
+  }
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .profile-container .tracker > * + * {
+    margin-top: 1.5rem;
+  }
+  .card-lower {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* profile section */
+
+.profile-container {
+  border-radius: 10px;
+  background-color: var(--Dark-blue);
+}
+
+.profile {
+  padding: 2.5rem 2.5rem 7rem 2.5rem;
+  background-color: var(--Blue);
+  border-radius: 1.5rem;
+}
+
+.profile-container .profile-img {
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-bottom: 3rem;
+}
+
+.profile-container .tracker {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+}
+
+/* cards section */
+.cards-container {
+  display: grid;
+  gap: 2rem;
+}
+
+.cards-container .card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: right 8% top -8%;
+  padding-top: 4rem;
+}
+
+.card .card-body {
+  background-color: var(--Dark-blue);
+  padding: 2rem;
+  border-radius: 1.3rem;
+  margin-top: auto;
+  width: 100%;
+  transition: all 0.2s ease-in;
+}
+
+.card .card-body:hover {
+  background-color: hsla(235, 45%, 61%, 0.993);
+}
+
+.card .card-body .card-upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.card .card-body .card-lower {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .card-body .secondary-title {
+  font-size: clamp(3rem, 5vw + 0.5rem, 4.5rem);
+  font-weight: 300;
+}
+
+.card .card-body .type {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.card .card-body .small {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+
+.cards-container .card-1 {
+  background-color: var(--Light-red-work);
+  background-image: url("../images/icon-work.svg");
+}
+
+.cards-container .card-2 {
+  background-color: var(--Soft-blue-play);
+  background-image: url("../images/icon-play.svg");
+}
+
+.cards-container .card-3 {
+  background-color: var(--Light-red-study);
+  background-image: url("../images/icon-study.svg");
+}
+
+.cards-container .card-4 {
+  background-color: var(--Lime-green-exercise);
+  background-image: url("../images/icon-exercise.svg");
+}
+
+.cards-container .card-5 {
+  background-color: var(--Violet-social);
+  background-image: url("../images/icon-social.svg");
+}
+
+.cards-container .card-6 {
+  background-color: var(--Soft-orange-self-care);
+  background-image: url("../images/icon-self-care.svg");
+}
