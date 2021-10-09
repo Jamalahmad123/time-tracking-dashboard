@@ -83,6 +83,7 @@ img {
 
 .dashboard {
   display: grid;
+  place-content: center;
   gap: 2rem;
   max-width: var(--Desktop);
   width: 100%;
@@ -149,7 +150,6 @@ img {
 .cards-container {
   display: grid;
   gap: 2rem;
-  width: 90%;
 }
 
 .cards-container .card {
